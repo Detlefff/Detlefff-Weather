@@ -13,7 +13,7 @@ class weather extends Script
 		$owm = new OpenWeatherMap();
 
 		try {
-		    $weatherNow = $owm->getWeatherForecast($this->matches[1], 'metric', 'en', $this->apiKey);
+		    $weatherNow = $owm->getWeather($this->matches[1], 'metric', 'en', $this->apiKey);
 		} catch(\Exception $e) {
 		    return $this->send('Failed to fetch weather data');
 		}
