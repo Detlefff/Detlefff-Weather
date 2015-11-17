@@ -9,6 +9,9 @@ class weather extends Script
 {
 	private $apiKey = '';
 
+	protected $helpMessage = "'weather LOCATION'\n";
+	protected $description = 'Returns the weather at the given location';
+
 	public function run() {
 		$owm = new OpenWeatherMap();
 
