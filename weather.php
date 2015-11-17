@@ -10,6 +10,8 @@ class weather extends Script
 	private $apiKey = '';
 
 	public function run() {
+		$owm = new OpenWeatherMap();
+
 		try {
 		    $weatherNow = $owm->getWeatherForecast($this->matches[1], 'metric', 'en', $this->apiKey);
 		} catch(\Exception $e) {
